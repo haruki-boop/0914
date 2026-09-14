@@ -5,9 +5,15 @@
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev:worker": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "hono": "^4.13.7"
+  },
+  "devDependencies": {
+    "wrangler": "^4.131.1"
   }
 }

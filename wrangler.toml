@@ -1,0 +1,11 @@
+name = "shimizu-kanban"
+main = "src/worker.js"
+compatibility_date = "2024-09-23"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[kv_namespaces]]
+binding = "BOARD_KV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"

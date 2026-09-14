@@ -1,9 +1,12 @@
 # Kanban Board
 
-Minimal self-hosted kanban-style task board. Node.js + Express backend with
-JSON-file persistence, vanilla JS frontend with drag-and-drop.
+Minimal kanban-style task board with a vanilla JS drag-and-drop frontend.
+Two interchangeable backends share the same API and frontend:
 
-## Run
+- `server.js` — Node.js + Express, JSON-file persistence (local dev)
+- `src/worker.js` — Cloudflare Workers + Hono, KV persistence (cloud deploy)
+
+## Run locally (Node.js)
 
 ```
 npm install
@@ -11,6 +14,22 @@ npm start
 ```
 
 Then open http://localhost:3000
+
+## Run locally (Cloudflare Workers simulator)
+
+```
+npm install
+npm run dev:worker
+```
+
+## Deploy to Cloudflare
+
+```
+npx wrangler login
+npx wrangler kv namespace create BOARD_KV
+# copy the returned id into wrangler.toml under [[kv_namespaces]]
+npm run deploy
+```
 
 ## API
 
