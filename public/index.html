@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kanban Board</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Kanban Board</h1>
+    <form id="new-card-form">
+      <input id="new-card-title" type="text" placeholder="新しいタスクを入力..." autocomplete="off" required />
+      <button type="submit">追加</button>
+    </form>
+  </header>
+
+  <main id="board">
+    <section class="column" data-column="todo">
+      <h2>To Do</h2>
+      <div class="card-list" data-column="todo"></div>
+    </section>
+    <section class="column" data-column="doing">
+      <h2>Doing</h2>
+      <div class="card-list" data-column="doing"></div>
+    </section>
+    <section class="column" data-column="done">
+      <h2>Done</h2>
+      <div class="card-list" data-column="done"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

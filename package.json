@@ -1,0 +1,13 @@
+{
+  "name": "kanban-board",
+  "version": "1.0.0",
+  "description": "A minimal self-hosted kanban-style task board",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
